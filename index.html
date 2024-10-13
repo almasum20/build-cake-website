@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- title here -->
+        <title>Cake Bakery</title>
+        <!-- style.css here -->
+        <link rel="stylesheet" href="style.css" />
+        <!-- font awesome cdn link here -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&family=Uchen&display=swap"
+            rel="stylesheet"
+        />
+        <!-- aos animation link here -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+    <body>
+        <!-- ============ header here =========== -->
+        <header>
+            <!-- navbar here -->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo" />
+                    <a href="#">Cake Bakery</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-bars" id="menu-bar"></i>
+                </div>
+                <ul class="nav-items">
+                    <h2>Menu Links</h2>
+                    <i class="fa-solid fa-xmark" id="close-bar"></i>
+                    <li><a href="#home">Home</a></li>
+                    <li>
+                        <a id="drop" href="#categories"
+                            >Category<i
+                                class="fa-solid fa-caret-down dropdown"
+                            ></i
+                        ></a>
+                        <ul class="dropdown-list">
+                            <li><a href="#birthdaycake">Birthday Cake</a></li>
+                            <li>
+                                <a href="#delicious-cake">Delicious Cake</a>
+                            </li>
+                            <li><a href="#">Party Cake</a></li>
+                            <li><a href="#">Slice Cake</a></li>
+                            <li><a href="#">Cup Cake</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fa-solid fa-user" id="login-btn"></i>
+                    <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- ============ popup box here =========== -->
+        <div class="blur-bg-overlay"></div>
+        <div class="form-popup">
+            <i class="fa-solid fa-xmark close-btn"></i>
+            <div class="form-box login">
+                <div class="form-details">
+                    <h2>Welcome Back</h2>
+                    <p>
+                        Please log in using your personal information to stay
+                        connected with us.
+                    </p>
+                </div>
+                <div class="form-content">
+                    <h2>LOGIN</h2>
+                    <form action="#">
+                        <div class="input-field">
+                            <input type="text" required />
+                            <label>Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required />
+                            <label>Password</label>
+                        </div>
+                        <a href="#" class="forgot-pass">Forgot Password?</a>
+                        <button type="submit">Log In</button>
+                    </form>
+                    <div class="button-link">
+                        Don't have an account?
+                        <a href="#" id="signup-link">Signup</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signup here -->
+            <div class="form-box signup">
+                <div class="form-details">
+                    <h2>Create Account</h2>
+                    <p>
+                        To become a part of your community, please sign up using
+                        your personal information.
+                    </p>
+                </div>
+                <div class="form-content">
+                    <h2>SIGNUP</h2>
+                    <form action="#">
+                        <div class="input-field">
+                            <input type="text" required />
+                            <label>Enter your email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" required />
+                            <label>Create password</label>
+                        </div>
+                        <div class="policy-text">
+                            <input type="checkbox" id="policy" />
+                            <label for="policy"
+                                >I agree the
+                                <a href="#">Terms & Conditions</a></label
+                            >
+                        </div>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <div class="button-link">
+                        Already have an account?
+                        <a href="#" id="login-link">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============ header content here =========== -->
+        <div class="header-content" id="home">
+            <div class="header-text" data-aos="fade-right">
+                <h1>
+                    Delicious Cakes Bakery <br />
+                    Category <span>Party Cake</span>
+                </h1>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Deserunt officiis saepe illum ea voluptatum corporis.
+                </p>
+                <button type="button" class="header-content-btn">
+                    Order Now
+                </button>
+            </div>
+            <div class="header-img" data-aos="fade-left">
+                <img src="images/background.png" alt="" />
+            </div>
+        </div>
+
+        <!-- ============ all cakes here =========== -->
+        <div class="all-cakes">
+            <div class="cakes-container">
+                <div class="super-cakes" id="categories">
+                    <div class="super-cake" data-aos="fade-up">
+                        <img src="images/box1.jpg" alt="cake image" />
+                    </div>
+                    <div class="super-cake" data-aos="fade-up">
+                        <img src="images/box2.jpg" alt="cake image" />
+                    </div>
+                    <div class="super-cake" data-aos="fade-up">
+                        <img src="images/box3.jpg" alt="cake image" />
+                    </div>
+                </div>
+                <!-- delicious cake -->
+                <div class="delicious-cake" id="delicious-cake">
+                    <div class="delicious-cake-text" data-aos="fade-right">
+                        <h2>
+                            Delicious Cake <br />
+                            UPTO 50% OFF
+                        </h2>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Unde, quasi minus. Dicta.
+                        </p>
+                        <button type="button">Order Now</button>
+                    </div>
+                    <div class="delicious-cake-img" data-aos="fade-left">
+                        <img src="images/banner-background.png" alt="" />
+                    </div>
+                </div>
+                <!-- cakes here -->
+                <div class="cakes">
+                    <h2>CAKES</h2>
+                    <hr />
+                    <div class="cakes-container2">
+                        <div class="cake" data-aos="zoom-in-down">
+                            <div class="cake-img">
+                                <img src="images/c1.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Cream Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$50.10</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                        <!-- cake 2 -->
+                        <div class="cake" data-aos="zoom-in-down">
+                            <div class="cake-img">
+                                <img src="images/c2.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Choco Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$60.5</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                        <!-- cake 3 -->
+                        <div class="cake" data-aos="zoom-in-down">
+                            <div class="cake-img">
+                                <img src="images/c3.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Slice Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$100.10</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                        <!-- cake 4 -->
+                        <div class="cake" data-aos="zoom-in-down">
+                            <div class="cake-img">
+                                <img src="images/c4.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Fruit Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$30.20</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                        <!-- cake 5 -->
+                        <div class="cake" data-aos="slide-up">
+                            <div class="cake-img">
+                                <img src="images/c5.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Brown Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$105</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                        <!-- cake 6 -->
+                        <div class="cake" data-aos="slide-up">
+                            <div class="cake-img">
+                                <img src="images/c6.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Slice Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$55.55</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                        <!-- cake 7 -->
+                        <div class="cake" data-aos="slide-up">
+                            <div class="cake-img">
+                                <img src="images/c7.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Fruit Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$200.00</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                        <!-- cake 8 -->
+                        <div class="cake" data-aos="slide-up">
+                            <div class="cake-img">
+                                <img src="images/c8.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Choco Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$30.10</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- birthday cake here -->
+                <div class="birthday-cakes" id="birthdaycake">
+                    <h2>BIRTHDAY CAKE</h2>
+                    <hr />
+                    <div class="birthday-cakes-container">
+                        <div class="cake" data-aos="zoom-in-up">
+                            <div class="cake-img">
+                                <img src="images/c9.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Birthday Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$500.10</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                        <!-- cake 2 -->
+                        <div class="cake" data-aos="zoom-in-up">
+                            <div class="cake-img">
+                                <img src="images/c10.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Bir Cup Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$300.20</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                        <!-- cake 3 -->
+                        <div class="cake" data-aos="zoom-in-up">
+                            <div class="cake-img">
+                                <img src="images/c11.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Birthday Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$100.50</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                        <!-- cake 4 -->
+                        <div class="cake" data-aos="zoom-in-up">
+                            <div class="cake-img">
+                                <img src="images/c8.png" alt="cake image" />
+                            </div>
+                            <div class="cake-title">
+                                <h3>Cup Cake</h3>
+                            </div>
+                            <div class="cake-body">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <i class="fa-solid fa-star dark-icon"></i>
+                                <p>
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="cake-footer">
+                                <span>$50.10</span>
+                                <button>Add Cart</button>
+                            </div>
+                            <i class="fa-solid fa-eye cart-icon cart-icon1"></i>
+                            <i
+                                class="fa-solid fa-heart cart-icon cart-icon2"
+                            ></i>
+                            <i
+                                class="fa-solid fa-bag-shopping cart-icon cart-icon3"
+                            ></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- our gallery -->
+                <div class="our-gallery" id="gallery">
+                    <h2>OUR GALLERY</h2>
+                    <hr />
+                    <div class="gallery-container">
+                        <div class="gallery" data-aos="slide-right">
+                            <img src="images/o1.png" alt="cake image" />
+                        </div>
+                        <div class="gallery" data-aos="slide-up">
+                            <img src="images/o2.png" alt="cake image" />
+                        </div>
+                        <div class="gallery" data-aos="slide-left">
+                            <img src="images/o3.png" alt="cake image" />
+                        </div>
+                        <div class="gallery" data-aos="slide-right">
+                            <img src="images/o4.png" alt="cake image" />
+                        </div>
+                        <div class="gallery" data-aos="slide-up">
+                            <img src="images/o5.png" alt="cake image" />
+                        </div>
+                        <div class="gallery" data-aos="slide-left">
+                            <img src="images/o6.png" alt="cake image" />
+                        </div>
+                    </div>
+                </div>
+                <!-- about us here -->
+                <div class="about-us" id="about">
+                    <h2>ABOUT US</h2>
+                    <hr />
+                    <div class="about-us-container">
+                        <div class="about-img" data-aos="slide-right">
+                            <img src="images/about.png" alt="cake image" />
+                        </div>
+                        <div class="about-text" data-aos="slide-left">
+                            <h3>Now you can know about us</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Quis est dignissimos illo,
+                                reiciendis maxime error, esse sint praesentium
+                                ullam, eos ex iusto adipisci. Quod, doloribus
+                                beatae ipsam molestias ex sapiente! Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit.
+                                Facilis, nemo? Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Sint, quasi.
+                            </p>
+                            <button type="button">Read More...</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- contact us here -->
+                <div class="contact-us" id="contact" data-aos="fade-up">
+                    <h2>CONTACT US</h2>
+                    <hr />
+                    <div class="contact-us-container">
+                        <form action="#">
+                            <div class="input">
+                                <input
+                                    type="text"
+                                    placeholder="Name"
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    required
+                                />
+                                <input
+                                    type="number"
+                                    placeholder="Phome"
+                                    required
+                                />
+                            </div>
+                            <textarea placeholder="Message"></textarea>
+                            <div class="contact-button">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ footer here =========== -->
+        <footer>
+            <div class="footer-container">
+                <h2>Cake Bakery</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quam voluptates cumque perspiciatis, error atque aliquid
+                    aspernatur dignissimos? Earum, recusandae iure!
+                </p>
+                <div class="footer-icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-google"></i>
+                </div>
+                <p>
+                    &copy; Copyright Cake Bakery All Right Reserved
+                    <br />Designed By Masum
+                </p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+        <!-- aos animation here -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 140,
+                duration: 1000
+            });
+        </script>
+    </body>
+</html>
